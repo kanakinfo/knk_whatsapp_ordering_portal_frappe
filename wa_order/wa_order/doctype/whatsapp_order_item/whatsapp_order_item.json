@@ -1,0 +1,175 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "creation": "2026-11-25 12:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "raw_text",
+  "item_text",
+  "item_code",
+  "item_name",
+  "col_a",
+  "requested_qty",
+  "requested_uom",
+  "conversion_factor",
+  "sec_b",
+  "qty",
+  "uom",
+  "col_b",
+  "rate",
+  "amount",
+  "sec_c",
+  "confidence",
+  "match_note",
+  "alternatives",
+  "currency"
+ ],
+ "fields": [
+  {
+   "fieldname": "raw_text",
+   "fieldtype": "Data",
+   "label": "Dealer Said",
+   "read_only": 1,
+   "in_list_view": 1,
+   "columns": 2
+  },
+  {
+   "fieldname": "item_text",
+   "fieldtype": "Data",
+   "label": "Parsed Item Text",
+   "read_only": 1
+  },
+  {
+   "fieldname": "item_code",
+   "fieldtype": "Link",
+   "label": "Item",
+   "options": "Item",
+   "in_list_view": 1,
+   "columns": 2,
+   "description": "Change this to correct the match; quantity and rate recompute."
+  },
+  {
+   "fieldname": "item_name",
+   "fieldtype": "Data",
+   "label": "Item Name",
+   "fetch_from": "item_code.item_name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "col_a",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "requested_qty",
+   "fieldtype": "Float",
+   "label": "Asked Qty",
+   "read_only": 1,
+   "in_list_view": 1,
+   "columns": 1,
+   "precision": "3"
+  },
+  {
+   "fieldname": "requested_uom",
+   "fieldtype": "Data",
+   "label": "Asked Unit",
+   "read_only": 1,
+   "in_list_view": 1,
+   "columns": 1
+  },
+  {
+   "fieldname": "conversion_factor",
+   "fieldtype": "Float",
+   "label": "Conversion Factor",
+   "read_only": 1,
+   "precision": "6",
+   "default": "1",
+   "description": "How many stock UOM one asked unit represents."
+  },
+  {
+   "fieldname": "sec_b",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "qty",
+   "fieldtype": "Float",
+   "label": "Qty",
+   "reqd": 1,
+   "in_list_view": 1,
+   "columns": 1,
+   "precision": "3",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "uom",
+   "fieldtype": "Link",
+   "label": "UOM",
+   "options": "UOM",
+   "in_list_view": 1,
+   "columns": 1
+  },
+  {
+   "fieldname": "col_b",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "rate",
+   "fieldtype": "Currency",
+   "label": "Rate",
+   "options": "currency"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "label": "Amount",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sec_c",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "confidence",
+   "fieldtype": "Percent",
+   "label": "Match Confidence",
+   "read_only": 1,
+   "in_list_view": 1,
+   "columns": 1
+  },
+  {
+   "fieldname": "match_note",
+   "fieldtype": "Small Text",
+   "label": "Match Note",
+   "read_only": 1
+  },
+  {
+   "fieldname": "alternatives",
+   "fieldtype": "Small Text",
+   "label": "Other Candidates",
+   "read_only": 1,
+   "description": "Ranked alternatives the matcher considered."
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency",
+   "hidden": 1,
+   "print_hide": 1
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "links": [],
+ "modified": "2026-11-25 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "WA Order",
+ "name": "WhatsApp Order Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "istable": 1
+}

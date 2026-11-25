@@ -1,0 +1,175 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "creation": "2026-11-25 12:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "sec_erp",
+  "company",
+  "selling_price_list",
+  "col_1",
+  "warehouse",
+  "delivery_lead_days",
+  "submit_sales_order",
+  "sec_rules",
+  "autopost_confidence",
+  "match_accept_threshold",
+  "col_2",
+  "enforce_credit_limit",
+  "enforce_stock",
+  "stale_order_days",
+  "sec_reply",
+  "notify_on_approve",
+  "agent_url",
+  "agent_token"
+ ],
+ "fields": [
+  {
+   "fieldname": "sec_erp",
+   "fieldtype": "Section Break",
+   "label": "Sales Order Defaults"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "selling_price_list",
+   "fieldtype": "Link",
+   "label": "Selling Price List",
+   "options": "Price List",
+   "reqd": 1
+  },
+  {
+   "fieldname": "col_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "warehouse",
+   "fieldtype": "Link",
+   "label": "Warehouse",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "delivery_lead_days",
+   "fieldtype": "Int",
+   "label": "Delivery Lead Days",
+   "default": "2",
+   "description": "Delivery date = order date + this many days."
+  },
+  {
+   "fieldname": "submit_sales_order",
+   "fieldtype": "Check",
+   "label": "Submit Sales Order",
+   "default": "0",
+   "description": "Off = create as draft. Keep this off during a pilot."
+  },
+  {
+   "fieldname": "sec_rules",
+   "fieldtype": "Section Break",
+   "label": "Decision Rules"
+  },
+  {
+   "fieldname": "autopost_confidence",
+   "fieldtype": "Float",
+   "label": "Auto-post Confidence",
+   "default": "0.82",
+   "precision": "2",
+   "description": "Every line must reach this to post without review (0-1)."
+  },
+  {
+   "fieldname": "match_accept_threshold",
+   "fieldtype": "Float",
+   "label": "Match Accept Threshold",
+   "default": "0.72",
+   "precision": "2",
+   "description": "Below this a line is flagged; well below it is blocked."
+  },
+  {
+   "fieldname": "col_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "enforce_credit_limit",
+   "fieldtype": "Check",
+   "label": "Block on Credit Limit",
+   "default": "1"
+  },
+  {
+   "fieldname": "enforce_stock",
+   "fieldtype": "Check",
+   "label": "Block on Insufficient Stock",
+   "default": "0"
+  },
+  {
+   "fieldname": "stale_order_days",
+   "fieldtype": "Int",
+   "label": "Auto-expire Unreviewed After (days)",
+   "default": "30"
+  },
+  {
+   "fieldname": "sec_reply",
+   "fieldtype": "Section Break",
+   "label": "Replies"
+  },
+  {
+   "fieldname": "notify_on_approve",
+   "fieldtype": "Check",
+   "label": "Send WhatsApp Reply on Approve",
+   "default": "1"
+  },
+  {
+   "fieldname": "agent_url",
+   "fieldtype": "Data",
+   "label": "Agent URL",
+   "description": "Base URL of the order agent service, used to send replies from ERPNext. e.g. https://agent.yourhost.com"
+  },
+  {
+   "fieldname": "agent_token",
+   "fieldtype": "Password",
+   "label": "Agent Shared Token",
+   "description": "Must match AGENT_TOKEN on the agent service."
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "links": [],
+ "modified": "2026-11-25 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "WA Order",
+ "name": "WhatsApp Order Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "report": 1,
+   "export": 1,
+   "email": 1,
+   "print": 1,
+   "share": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "Sales Manager",
+   "read": 1,
+   "report": 1,
+   "export": 1,
+   "email": 1,
+   "print": 1,
+   "share": 1,
+   "write": 1,
+   "create": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "issingle": 1
+}
