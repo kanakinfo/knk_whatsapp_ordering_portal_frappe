@@ -15,6 +15,18 @@ before_uninstall = "wa_order.install.before_uninstall"
 app_include_js = []
 app_include_css = []
 
+# v16: the desktop app icon is driven by this hook. Harmless on v15, which
+# ignores hooks it does not know.
+add_to_apps_screen = [
+    {
+        "name": "wa_order",
+        "logo": "/assets/wa_order/images/logo.svg",
+        "title": "WhatsApp Orders",
+        "route": "/app/whatsapp-orders",
+        "has_permission": "wa_order.api.has_app_permission",
+    }
+]
+
 doctype_js = {
     "Item": "public/js/item.js",
 }

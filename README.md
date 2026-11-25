@@ -17,6 +17,22 @@ of posting, not against a copy the agent fetched earlier.
 
 ---
 
+## 0. Versions
+
+Runs on **Frappe/ERPNext v15 and v16**. Written against the v15 DocType schema
+and made v16-compatible. v14 is untested but should work; **v13 and older will
+not** — the workspace format differs. Check yours with `bench version`.
+
+v16 needs Python 3.14+ and Node 24+. Three v16 changes are already handled:
+`sort_field` is set to `creation` on every doctype, `hooks.py` carries an
+`add_to_apps_screen` entry (v15 ignores hooks it doesn't know), and
+`has_app_permission` returns a real boolean because v16 no longer accepts a
+truthy value.
+
+One thing to check on v16: the apps-screen icon routes to `/app/whatsapp-orders`.
+If your build has moved the desk to `/desk` and the icon 404s, change that one
+string in `hooks.py`. It affects the icon only.
+
 ## 1. Install
 
 ```bash

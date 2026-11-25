@@ -1,2 +1,2 @@
-# Frappe and ERPNext are provided by the bench, not installed here.
-rapidfuzz>=3.6
+# Frappe and ERPNext are provided by the bench; nothing extra is needed.
+# Matching happens in the agent service, not in this app.

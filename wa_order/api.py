@@ -24,6 +24,17 @@ from wa_order.utils import (
 )
 
 
+def has_app_permission():
+    """Who sees the WhatsApp Orders icon on the v16 apps screen.
+
+    v16 requires has_permission hooks to return True explicitly; a truthy
+    value is no longer enough.
+    """
+    roles = set(frappe.get_roles())
+    allowed = {"Sales User", "Sales Manager", "System Manager", "Administrator"}
+    return True if roles & allowed else False
+
+
 # --------------------------------------------------------------- catalogue
 
 @frappe.whitelist()
