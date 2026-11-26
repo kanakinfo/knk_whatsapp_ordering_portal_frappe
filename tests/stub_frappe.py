@@ -1,5 +1,5 @@
 """A minimal in-memory `frappe` so the pure logic in wa_order can be tested
-without a bench. Supports only what wa_order.utils actually calls.
+without a bench. Supports only what knk_whatsapp_ordering_portal_frappe.utils actually calls.
 
 Your dev team can use this to test matching changes in seconds instead of
 running a full site.

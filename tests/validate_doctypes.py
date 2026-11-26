@@ -14,7 +14,7 @@ import re
 import sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-APP = ROOT / "wa_order"
+APP = ROOT / "knk_whatsapp_ordering_portal_frappe"
 
 # Fieldnames Frappe reserves on every document.
 RESERVED = {

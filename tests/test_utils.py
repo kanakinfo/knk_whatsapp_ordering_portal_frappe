@@ -14,7 +14,7 @@ import stub_frappe  # noqa: E402
 
 DB = stub_frappe.install()
 
-from wa_order.utils import (  # noqa: E402
+from knk_whatsapp_ordering_portal_frappe.utils import (  # noqa: E402
     get_item_rate,
     normalise_phone,
     resolve_uom,

@@ -1,6 +1,6 @@
 """Demo master data for a fresh ERPNext instance.
 
-    bench --site <site> execute wa_order.demo.install
+    bench --site <site> execute knk_whatsapp_ordering_portal_frappe.demo.install
 
 Creates UOMs, items with dealer aliases and case conversions, customers with
 WhatsApp numbers and credit limits, opening stock and opening receivables -
@@ -9,7 +9,7 @@ everything the demo messages need.
 Safe to re-run: every step checks for an existing record first.
 Remove it all with:
 
-    bench --site <site> execute wa_order.demo.uninstall
+    bench --site <site> execute knk_whatsapp_ordering_portal_frappe.demo.uninstall
 
 Invented house brands on purpose - demo data you ship should not carry third
 party trademarks.

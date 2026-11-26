@@ -9,7 +9,7 @@ from frappe import _
 from frappe.model.document import Document
 from frappe.utils import add_days, flt, nowdate
 
-from wa_order.utils import get_item_rate, get_settings, resolve_uom
+from knk_whatsapp_ordering_portal_frappe.utils import get_item_rate, get_settings, resolve_uom
 
 BLOCKING_CODES_CLEARED_BY_CORRECTION = {
     "no_match",

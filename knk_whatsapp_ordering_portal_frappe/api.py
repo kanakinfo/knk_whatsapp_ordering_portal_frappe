@@ -16,7 +16,7 @@ import frappe
 from frappe import _
 from frappe.utils import add_days, cint, flt, now_datetime, nowdate
 
-from wa_order.utils import (
+from knk_whatsapp_ordering_portal_frappe.utils import (
     get_item_rate,
     get_settings,
     normalise_phone,
